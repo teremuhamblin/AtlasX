@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>AtlasX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>AtlasX – Cartographie des extensions</h1>
+  <div id="meta"></div>
+  <table id="extensions">
+    <thead>
+      <tr>
+        <th>Extension</th>
+        <th>Fichiers</th>
+        <th>Taille totale (octets)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const data = {{ATLASX_DATA_JSON}};
+    document.getElementById('meta').innerText =
+      `Racine: ${data.scanned_root} | Fichiers: ${data.total_files} | Taille: ${data.total_size} octets`;
+
+    const tbody = document.querySelector('#extensions tbody');
+    Object.entries(data.by_extension).forEach(([ext, stats]) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><code>${ext}</code></td>
+        <td>${stats.count}</td>
+        <td>${stats.total_size}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  </script>
+</body>
+</html>
