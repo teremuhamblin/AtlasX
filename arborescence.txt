@@ -1,0 +1,33 @@
+atlasx/
+├─ README.md
+├─ LICENSE
+├─ atlasx.config.toml
+├─ docs/
+│  ├─ overview.md
+│  ├─ usage.md
+│  └─ architecture.md
+├─ cli/
+│  ├─ Cargo.toml
+│  └─ src/
+│     ├─ main.rs
+│     ├─ scanner.rs
+│     ├─ model.rs
+│     └─ report.rs
+├─ engine/
+│  ├─ pyproject.toml
+│  └─ atlasx_engine/
+│     ├─ __init__.py
+│     ├─ scanner.py
+│     └─ suggestions.py
+├─ reports/
+│  ├─ templates/
+│  │  ├─ index.html
+│  │  └─ style.css
+│  └─ samples/
+│     └─ sample-report.html
+├─ scripts/
+│  ├─ generate-report.sh
+│  ├─ generate-report.ps1
+│  └─ validate-structure.py
+└─ roadmap/
+   └─ v1.0.0.md
