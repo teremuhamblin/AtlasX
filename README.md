@@ -1,8 +1,8 @@
 # AtlasX
-
+<p align="center">
 AtlasX est un outil créatif-tech qui scanne un répertoire,
 cartographie les extensions de fichiers, et génère une documentation
-(JSON, Markdown, HTML) sur la structure réelle d'un projet.
+(JSON, Markdown, HTML) sur la structure réelle d'un projet.</p>
 
 ## Fonctionnalités
 
@@ -16,3 +16,7 @@ cartographie les extensions de fichiers, et génère une documentation
 ```bash
 cd cli
 cargo build --release
+```
+
+## Utilisation
+- Voir le fichier AtlasX/ utilisation.sh
