@@ -1,0 +1,119 @@
+# ============================================================
+#  AtlasX – Fichier de configuration principal
+#  Ce fichier permet de personnaliser le comportement du scanner,
+#  les regroupements, les exclusions et les rapports générés.
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. Paramètres généraux
+# ------------------------------------------------------------
+[general]
+# Répertoire racine à scanner (peut être surchargé via CLI)
+root = "."
+
+# Activer l'affichage détaillé dans la CLI
+verbose = false
+
+
+# ------------------------------------------------------------
+# 2. Exclusions
+# ------------------------------------------------------------
+[exclude]
+# Dossiers à ignorer complètement
+directories = [
+    "node_modules",
+    "target",
+    "dist",
+    "__pycache__",
+    ".git",
+    ".venv",
+]
+
+# Extensions à ignorer
+extensions = [
+    "lock",   # ex: Cargo.lock, package-lock.json
+    "tmp",
+    "bak",
+]
+
+# Fichiers spécifiques à ignorer
+files = [
+    ".DS_Store",
+    "Thumbs.db",
+]
+
+
+# ------------------------------------------------------------
+# 3. Alias d’extensions
+# Permet de regrouper plusieurs extensions sous un même nom logique.
+# ------------------------------------------------------------
+[aliases]
+jpeg = "jpg"
+htm  = "html"
+yml  = "yaml"
+mdown = "md"
+
+
+# ------------------------------------------------------------
+# 4. Groupements personnalisés
+# Permet de définir des catégories pour les rapports.
+# ------------------------------------------------------------
+[groups]
+
+# Groupe "code"
+code = [
+    "rs", "go", "py", "js", "ts", "java", "php", "sh", "ps1", "rb", "c", "cpp"
+]
+
+# Groupe "assets"
+assets = [
+    "png", "jpg", "jpeg", "svg", "gif", "ico", "webp"
+]
+
+# Groupe "documents"
+docs = [
+    "md", "txt", "rst", "pdf"
+]
+
+# Groupe "archives"
+archives = [
+    "zip", "tar", "gz", "rar", "7z"
+]
+
+
+# ------------------------------------------------------------
+# 5. Limites de scan
+# ------------------------------------------------------------
+[limits]
+# Taille maximale d’un fichier scanné (en octets)
+max_file_size = 50000000  # 50 Mo
+
+# Nombre maximum de fichiers analysés par extension
+max_samples_per_extension = 5
+
+
+# ------------------------------------------------------------
+# 6. Génération des rapports
+# ------------------------------------------------------------
+[reports]
+# Formats disponibles : "json", "markdown", "html"
+formats = ["json", "markdown", "html"]
+
+# Dossier de sortie
+output_directory = "reports"
+
+# Template HTML personnalisé
+html_template = "reports/templates/index.html"
+
+
+# ------------------------------------------------------------
+# 7. Moteur de suggestions
+# ------------------------------------------------------------
+[suggestions]
+# Activer ou désactiver le moteur Python
+enabled = true
+
+# Types de suggestions à générer
+normalization = true
+grouping = true
+cleanup = true
