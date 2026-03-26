@@ -1,33 +1,40 @@
 atlasx/
-├─ README.md
-├─ LICENSE
-├─ atlasx.config.toml
-├─ docs/
+│
+├─ .gitignore                     ← À la racine
+├─ LICENSE                        ← À la racine
+├─ README.md                      ← À la racine
+├─ atlasx.config.toml             ← À la racine
+│
+├─ docs/                          ← Documentation du projet
 │  ├─ overview.md
 │  ├─ usage.md
 │  └─ architecture.md
-├─ cli/
+│
+├─ cli/                           ← Le code Rust (le cœur du logiciel)
 │  ├─ Cargo.toml
 │  └─ src/
 │     ├─ main.rs
 │     ├─ scanner.rs
 │     ├─ model.rs
 │     └─ report.rs
-├─ engine/
+│
+├─ engine/                        ← Le moteur Python (suggestions)
 │  ├─ pyproject.toml
 │  └─ atlasx_engine/
 │     ├─ __init__.py
 │     ├─ scanner.py
 │     └─ suggestions.py
-├─ reports/
-│  ├─ templates/
+│
+├─ reports/                       ← Rapports générés automatiquement
+│  ├─ templates/                  ← Templates HTML
 │  │  ├─ index.html
 │  │  └─ style.css
-│  └─ samples/
-│     └─ sample-report.html
-├─ scripts/
+│  └─ .gitkeep                    ← Pour garder le dossier vide dans Git
+│
+├─ scripts/                       ← Scripts utilitaires
 │  ├─ generate-report.sh
 │  ├─ generate-report.ps1
 │  └─ validate-structure.py
-└─ roadmap/
+│
+└─ roadmap/                       ← Roadmap du projet
    └─ v1.0.0.md
