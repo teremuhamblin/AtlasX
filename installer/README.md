@@ -1,5 +1,4 @@
-Bien sûr, Teremu — je vais te montrer exactement comment créer ton installateur Windows (.exe) pour AtlasX et où placer chaque fichier dans ton projet, sans ambiguïté.  
-Je te fais ça propre, clair, comme si tu préparais une release pro.
+Installateur Windows (.exe) pour AtlasX.
 
 ---
 
